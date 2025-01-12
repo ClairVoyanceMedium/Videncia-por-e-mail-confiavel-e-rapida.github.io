@@ -1,42 +1,21 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt optimisé pour moteurs de recherche et IA
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
+Allow: /
 Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+# Emplacement du sitemap
+Sitemap: https://clairvoyancemedium.github.io/Videncia-por-e-mail-confiavel-e-rapida.github.io/sitemap.xml
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+# Retards pour éviter la surcharge des serveurs
+Crawl-delay: 10
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+# Directives pour des crawlers spécifiques
 User-agent: Googlebot
 Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Disallow: /cgi-bin/
+
 User-agent: Bingbot
 Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+Disallow: /private/
